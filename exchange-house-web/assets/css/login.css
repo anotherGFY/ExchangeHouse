@@ -1,0 +1,175 @@
+
+body {
+    color: #333;
+    font-size: 14px;
+    font-family: 'Helvetica Neue','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft Yahei',sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.reg-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.reg-wrapper h2 {
+    text-align: center;
+    font-weight: normal;
+    margin: 35px 0;
+}
+.reg-wrapper h3 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 15px 0;
+}
+.reg-wrapper h3 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 15px 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+
+img.logo {
+    height: 150px;
+}
+
+img {
+    border-style: none;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+.fields {
+    margin: 0 20px;
+}
+.fields .row {
+    margin-bottom: 20px;
+    position: relative;
+}
+.fields .row.right {
+    text-align: center;
+}
+
+.fields .row>input[type=text], .fields .row>input[type=password] {
+    width: 100%;
+}
+input.text.large, textarea.text.large, select.text.large {
+    height: 42px;
+}
+input.text, textarea.text, select.text {
+    box-sizing: border-box;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    resize: none;
+}
+input, textarea, div[contenteditable] {
+    outline: none;
+}
+.fields .row>input[type=text], .fields .row>input[type=password] {
+    width: 100%;
+}
+input.text.item-error, textarea.text.item-error, select.text.item-error {
+    border-color: red;
+}
+.fields .row .error {
+    line-height: 42px;
+    position: absolute;
+    left: 375px;
+    top: 0;
+    width: 200px;
+    display: none;
+}
+.error {
+    color: #ff4141;
+}
+
+button, input, select, textarea {
+    margin: 0;
+}
+button, input, select {
+    overflow: visible;
+}
+button, input, select, textarea {
+    font: inherit;
+}
+.fields .row input[type=checkbox] {
+    position: relative;
+    background: white;
+    width: 18px;
+    height: 18px;
+    -webkit-appearance: initial;
+    border-radius: 2px;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #d9d9d9;
+    vertical-align: middle;
+}
+[type="checkbox"], [type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+.fields .row input[type=checkbox]:checked:after {
+    content: '\2714';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #444;
+    width: 100%;
+    line-height: 18px;
+    text-align: center;
+    font-size: 13px;
+    vertical-align: text-top;
+}
+.fields .row .forget {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.text.dark {
+    color: #111;
+}
+.fields .submit {
+    display: block;
+}
+.text.light {
+    color: #777;
+}
+.fields .row.right {
+    text-align: center;
+}
+.button.large {
+    height: 42px;
+    line-height: 42px;
+    font-size: 16px;
+    padding: 0 25px;
+}
+
+.button.blue {
+    background: #82caea;
+}
+.button {
+    box-sizing: border-box;
+    border-radius: 2px;
+    color: #fff;
+    height: 36px;
+    line-height: 36px;
+    outline: 0;
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    padding: 0 20px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+    vertical-align: middle;
+}
