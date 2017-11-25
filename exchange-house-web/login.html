@@ -1,70 +1,54 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta charset="utf-8" />
-		<title>登录奔跑贷
-                    <?php  ?>
-                </title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta charset="utf-8" />
+        <title>登录奔跑贷</title>
+
+        
+        <meta name="description" content="" />
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="shortcut icon" href="assets/images/logo/logo-s.ico">
 
 
-		<meta name="description" content="" />
-		<meta name="renderer" content="webkit">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link rel="shortcut icon" href="assets/images/logo/logo-s.ico">
+        <!-- text fonts -->
+        <link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
 
 
-		<!-- login -->
-		<link rel="stylesheet" href="assets/css/login.css" />
+        <!-- login page styles -->
+        <link rel="stylesheet" type="text/css" href="assets/css/login.css">
 
-	</head>
 
-	<body>
-		<div class="reg-wrapper">
-			<h2>
-				<a href="#">
-				<img class="logo" src="assets/images/logo/logo-word-1.png" >
-				</a>
-			</h2>
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 
-			<h3>登录</h3>
+    </head>
 
-			<div class="fields">
-				<form>
+    <body>
 
-					<div class="row">
-						<input type="text" class="text large" name="phone" placeholder="手机号">
-					<div class="error"></div>
-					</div>
+        <div class="page-container">
+            <h1>奔跑贷</h1>
+            <form action="" method="post">
+                <input type="text" name="username" class="username" placeholder="手机号码">
+                <input type="password" name="password" class="password" placeholder="密码">
+                <button type="submit">登录</button>
+                <div class="error"><span>+</span></div>
+            </form>
+            <div class="connect">
+                <a href="#">立即注册</a>
+                <a href="#">忘记密码</a>
+            </div>
+        </div>
+        <!-- Javascript -->
+        <script src="for-page/login/jquery-1.8.2.min.js"></script>
+        <script src="for-page/login/supersized.3.2.7.min.js"></script>
+        <script src="for-page/login/supersized-init.js"></script>
+        <script src="for-page/login/scripts.js"></script>
 
-					<div class="row">
-						<input type="password" class="text large" name="password" placeholder="密码">
-					<div class="error"></div>
-					</div>
+    </body>
 
-					<div class="row">
-						<label>
-							<input type="checkbox" name="remember" value="true" checked="">
-							记住我
-						</label>
-						<a href="#" class="forget text dark">忘记密码</a>
-					</div>
-
-					<div class="row">
-						<div class="button large blue submit" id="submit">登录</div>
-					</div>
-
-					<div class="row right">
-						<span class="text light">还没有帐号，</span>
-						<a href="#" class="text dark">立即注册</a>
-					</div>
-				</form>
-
-			</div>
-		</div>
-
-		<script src="assets/js/login-base.js"></script>
-		<script src="assets/js/login.js"></script>
-
-		</body>
 </html>
+

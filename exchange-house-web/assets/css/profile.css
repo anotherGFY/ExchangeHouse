@@ -1,0 +1,29 @@
+.profile-head{
+	background:url(../images/profile/profile-bg.jpg) center center;
+	background-size:cover;
+}
+.wrapper-lg {
+    padding: 30px;
+}
+.bg-white-opacity {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.m-t {
+    margin-top: 15px;
+}
+.thumb-lg {
+    display: inline-block;
+    width: 96px;
+}
+.m-r {
+    margin-right: 15px;
+}
+.img-circle {
+    border-radius: 50%;
+}
+img {
+    vertical-align: middle;
+}
+hr, img {
+    border: 0;
+}
