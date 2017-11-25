@@ -18,6 +18,11 @@
 .m-r {
     margin-right: 15px;
 }
+.thumb img, .thumb-xs img, .thumb-sm img, .thumb-md img, .thumb-lg img, .thumb-btn img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
 .img-circle {
     border-radius: 50%;
 }
@@ -26,4 +31,91 @@ img {
 }
 hr, img {
     border: 0;
+}
+.m-b {
+    margin-bottom: 15px;
+}
+.clear {
+    display: block;
+    overflow: hidden;
+}
+.m-t-sm {
+    margin-top: 30px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin: 0;
+}
+h3, .h3 {
+    font-size: 24px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+.m-l {
+    margin-left: 15px;
+}
+small, .small {
+    font-size: 13px;
+}
+.pull-right {
+    float: right !important;
+}
+.text-center {
+    text-align: center;
+}
+.m-b-md {
+    margin-bottom: 20px;
+}
+.m {
+    margin: 15px;
+}
+.inline {
+    display: inline-block !important;
+}
+a {
+    color: #363f44;
+    text-decoration: none;
+    cursor: pointer;
+}
+a {
+    background-color: transparent;
+}
+
+a:active, a:hover {
+    outline: 0;
+}
+
+a:hover, a:focus {
+    color: #141719;
+    text-decoration: none;
+}
+.font-bold {
+    font-weight: 700;
+}
+.block {
+    display: block;
+}
+.m-b-md {
+    margin-bottom: 20px;
+}
+.m {
+    margin: 15px;
+}
+.font-bold {
+    font-weight: 700;
+}
+.block {
+    display: block;
+}
+@media (max-width: 442px){
+	.thumb-lg {
+    display: inline-block;
+    width: 86px;
+}
+    .pull-none-xs {
+        float: none !important;
+    }
 }
