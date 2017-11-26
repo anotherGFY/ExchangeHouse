@@ -17,12 +17,12 @@
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+        <![endif]--> 
     </head>
     <body>
         <div class="page-container">
             <h1>奔跑贷abc</h1>
-            <form action="php/action/login/action-login.php" method="post">
+            <form method="post" id="loginwin">
                 <input type="text" name="username" class="username" placeholder="手机号码">
                 <input type="password" name="password" class="password" placeholder="密码">
                 <button type="submit">登录</button>
@@ -43,5 +43,17 @@
     <script src="for-page/login/js/supersized.3.2.7.min.js"></script>
     <script src="for-page/login/js/supersized-init.js"></script>
     <script src="for-page/login/js/scripts.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            function getQueryStringByName(name) {
+                var result = location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
+                if (result == null || result.length < 1) {
+                    return "";
+                }
+                return result[1];
+            }
+            $("#loginwin").attr("action", "php/action/login/action-login.php?backurl=" + getQueryStringByName("backurl") + "");
+        });
+    </script>
 </body>
 </html>

@@ -15,7 +15,7 @@ class Http {
         return $this->exec($url);
     }
 
-    function post($url, $body) {
+    function post($url, $body = "") {
         return $this->exec($url, 'POST', $body);
     }
 
@@ -83,10 +83,10 @@ class Http {
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, $this->returntransfer); // 获取的信息以文件流的形式返回
         $totalline = curl_exec($curl); // 执行操作
         if (curl_errno($curl)) {
-            return json_encode('Errno' . curl_error($curl)); //捕抓异常
+            throw new Exception('Errno' . curl_error($curl)); //捕抓异常
         }
         curl_close($curl); // 关闭CURL会话
-        return json_encode($totalline); // 返回数据
+        return json_decode($totalline); // 返回数据
     }
 
 }
