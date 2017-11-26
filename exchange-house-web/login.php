@@ -22,7 +22,7 @@
     <body>
         <div class="page-container">
             <h1>奔跑贷abc</h1>
-            <form action="" method="post">
+            <form action="php/action/login/action-login.php" method="post">
                 <input type="text" name="username" class="username" placeholder="手机号码">
                 <input type="password" name="password" class="password" placeholder="密码">
                 <button type="submit">登录</button>
@@ -37,7 +37,6 @@
             </div>
         </div>
         <div align="center">Collect from <a href="#" target="_blank" title="注册">注册</a></div>
-
     </div>
     <!-- Javascript -->
     <script src="for-page/login/js/jquery-1.8.2.min.js"></script>
