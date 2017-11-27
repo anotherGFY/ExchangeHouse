@@ -16,7 +16,7 @@ if ($username != NULL && $password != NULL) {
             case 401:
                 Header("HTTP/1.1 401 errorauth");
                 echo "<script>alert('用户名或密码不正确！');history.go(-1);</script>";
-                //Header("Location: ../../../login.php");
+                //Header("Location: ../../../login.html");
                 break;
         }
     } else {

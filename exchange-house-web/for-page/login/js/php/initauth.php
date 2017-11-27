@@ -7,7 +7,7 @@
  */
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/php/APSK/McmModel.php");
 
-$uri = isset($_GET["login"]) ? $_GET["login"] : "http://www.hades.com/login.php";
+$uri = isset($_GET["login"]) ? $_GET["login"] : "http://www.hades.com/login.html";
 
 $out = <<<EOF
      window.location.href="$uri?backurl="+window.location.href;

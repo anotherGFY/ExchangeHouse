@@ -9,6 +9,8 @@
         <meta name="description" content="" />
         <meta name="renderer" content="webkit">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <!-- 页面登录验证 -->
+        <script src="../for-page/login/js/php/initauth.php"></script> 
         <link rel="shortcut icon" href="../assets/images/logo/logo-s.ico">
 
         <!-- bootstrap & fontawesome -->
@@ -42,8 +44,6 @@
         <!-- ace settings handler -->
         <script src="../assets/js/ace-extra.min.js"></script>
         <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
-        <script src="for-page/login/js/php/initauth.php" type="text/javascript"></script>
-
         <!--[if lte IE 8]>
         <script src="../assets/js/html5shiv.min.js"></script>
         <script src="../assets/js/respond.min.js"></script>
@@ -113,10 +113,10 @@
                             <div class="col-xs-6">
 
                                 <div class="btn-group list-setting-left">
-                                        <button id="remove-traffic" class="btn btn-xs btn-danger" style="border-width: 3px;">
-                                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                                            <span> 删除 </span>
-                                        </button>
+                                    <button id="remove-traffic" class="btn btn-xs btn-danger" style="border-width: 3px;">
+                                        <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                        <span> 删除 </span>
+                                    </button>
 
                                     <a href="#modal-table3" role="button" class="green" data-toggle="modal"> 
                                         <button class="btn btn-xs btn-info">
@@ -747,12 +747,12 @@
                             .selectmenu({position: {my: "left bottom", at: "left top"}})
 
                 });
-				
-				//delete
-				$(document).ready(function(){
-                  $("#remove-traffic").click(function(){
-                    $("tr").remove(".active");
-                  });
+
+                //delete
+                $(document).ready(function () {
+                    $("#remove-traffic").click(function () {
+                        $("tr").remove(".active");
+                    });
                 });
 
         </script>
