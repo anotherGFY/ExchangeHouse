@@ -25,6 +25,8 @@ if (isset($_COOKIE["usertoken"]) && isset($_COOKIE["user"])) {
         setcookie("usertoken", $_COOKIE["usertoken"], time() + 900, "/");
         setcookie("user", $_COOKIE["user"], time() + 900, "/");
     } else {
+        setcookie("usertoken", NULL, time() - 1000, "/");
+        setcookie("user", NULL, time() - 1000, "/");
         switch ($token->error->statusCode) {
             case 401:
                 echo "alert('用户登录超时');";

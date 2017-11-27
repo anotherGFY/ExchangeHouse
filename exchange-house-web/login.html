@@ -44,10 +44,9 @@
     <script src="for-page/login/js/scripts.js"></script>
     <script type="text/javascript">
         $(function () {
-
             if (getCookie("usertoken") != null) {
                 if (getQueryStringByName("backurl") != "")
-                    window.location.href = getQueryStringByName("backurl")
+                    window.location.href = getQueryStringByName("backurl");
                 else window.location.href = "traffic/my-traffic.html";
             }
             function getQueryStringByName(name) {
