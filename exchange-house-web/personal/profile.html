@@ -1,288 +1,293 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta charset="utf-8" />
-		<title>个人中心</title>
-
-		
-		<meta name="description" content="" />
-		<meta name="renderer" content="webkit">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link rel="shortcut icon" href="../assets/images/logo/logo-s.ico">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta charset="utf-8" />
+        <title>个人中心</title>
 
 
-		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="../assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+        <meta name="description" content="" />
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="shortcut icon" href="../assets/images/logo/logo-s.ico">
 
-		<!-- profile page styles -->
-		<link rel="stylesheet" type="text/css" href="../assets/css/profile.css">
 
-		<!-- text fonts -->
-		<link rel="stylesheet" href="../assets/css/fonts.googleapis.com.css" />
+        <!-- bootstrap & fontawesome -->
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../assets/font-awesome/4.5.0/css/font-awesome.min.css" />
 
-		<!-- ace styles -->
-		<link rel="stylesheet" href="../assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+        <!-- profile page styles -->
+        <link rel="stylesheet" type="text/css" href="../assets/css/profile.css">
 
-		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="../assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
-		<![endif]-->
-		<link rel="stylesheet" href="../assets/css/ace-skins.min.css" />
-		<link rel="stylesheet" href="../assets/css/ace-rtl.min.css" />
+        <!-- text fonts -->
+        <link rel="stylesheet" href="../assets/css/fonts.googleapis.com.css" />
 
-		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="../assets/css/ace-ie.min.css" />
-		<![endif]-->
+        <!-- ace styles -->
+        <link rel="stylesheet" href="../assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
 
-		<!-- inline styles related to this page -->
+        <!--[if lte IE 9]>
+                <link rel="stylesheet" href="../assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+        <![endif]-->
+        <link rel="stylesheet" href="../assets/css/ace-skins.min.css" />
+        <link rel="stylesheet" href="../assets/css/ace-rtl.min.css" />
 
-		<!-- ace settings handler -->
-		<script src="../assets/js/ace-extra.min.js"></script>
+        <!--[if lte IE 9]>
+          <link rel="stylesheet" href="../assets/css/ace-ie.min.css" />
+        <![endif]-->
 
-		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+        <!-- inline styles related to this page -->
 
-		<!--[if lte IE 8]>
-		<script src="../assets/js/html5shiv.min.js"></script>
-		<script src="../assets/js/respond.min.js"></script>
-		<![endif]-->
-	</head>
+        <!-- ace settings handler -->
+        <script src="../assets/js/ace-extra.min.js"></script>
+        <!-- 页面登录验证 -->
+        <script src="../for-page/login/js/php/initauth.php"></script> 
+        <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
-	<body class="no-skin">
+        <!--[if lte IE 8]>
+        <script src="../assets/js/html5shiv.min.js"></script>
+        <script src="../assets/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
 
-		<div class="main-container ace-save-state" id="main-container">
-			<script type="text/javascript">
-				try{ace.settings.loadState('main-container')}catch(e){}
-			</script>
+    <body class="no-skin">
+
+        <div class="main-container ace-save-state" id="main-container">
+            <script type="text/javascript">
+                try {
+                    ace.settings.loadState('main-container');
+                } catch (e) {
+                }
+            </script>
             <!--  侧边导航栏 start  -->
             <script src="../common/sidebar-in.js"></script>
             <!--  侧边导航栏 end  -->
 
-			<div class="main-content">
+            <div class="main-content">
 
-				<div class="main-content-inner">
+                <div class="main-content-inner">
 
                     <!--  顶部 start -->
-					<script src="../common/head-in.js"></script>
+                    <script src="../common/head-in.js"></script>
                     <!--  顶部 end  -->
 
 
-			    	<div class="main-content-inner for-nav-top">
+                    <div class="main-content-inner for-nav-top">
 
-				        <div class="profile-head">
-		                  <div class="wrapper-lg bg-white-opacity">
-			                  <div class="row m-t">
-			                    <div class="col-sm-7">
-			                      <a href="" class="thumb-lg pull-left m-r">
-			                        <img src="../assets/images/avatars/a4.png" class="img-circle">
-			                      </a>
-			                      <div class="clear m-b">
-			                        <div class="m-b m-t-sm">
-			                          <span class="h3 text-black">John.Smith</span>
-			                          <small class="m-l">London, UK</small>
-			                        </div>
-			                      </div>
-			                    </div>
-			                    <div class="col-sm-5">
-			                      <div class="pull-right pull-none-xs text-center">
-			                        <a href="" class="m-b-md inline m">
-			                          <span class="h3 block font-bold">5k</span>
-			                          <small>我的流量</small>
-			                        </a>
-			                        <a href="" class="m-b-md inline m">
-			                          <span class="h3 block font-bold">1500</span>
-			                          <small>账户流量</small>
-			                        </a>
-			                      </div>
-			                    </div>
-			                  </div>
-		                  </div>
-		                </div>
-                        
-                        
-                        
+                        <div class="profile-head">
+                            <div class="wrapper-lg bg-white-opacity">
+                                <div class="row m-t">
+                                    <div class="col-sm-7">
+                                        <a href="" class="thumb-lg pull-left m-r">
+                                            <img src="../assets/images/avatars/a4.png" class="img-circle">
+                                        </a>
+                                        <div class="clear m-b">
+                                            <div class="m-b m-t-sm">
+                                                <span class="h3 text-black">John.Smith</span>
+                                                <small class="m-l">London, UK</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="pull-right pull-none-xs text-center">
+                                            <a href="" class="m-b-md inline m">
+                                                <span class="h3 block font-bold">5k</span>
+                                                <small>我的流量</small>
+                                            </a>
+                                            <a href="" class="m-b-md inline m">
+                                                <span class="h3 block font-bold">1500</span>
+                                                <small>账户流量</small>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
                         <div class="page-content">
                             <div class="row">
                                 <div class="col-sm-7">
-                                    
+
                                     <div class="page-header">
-						            	<h1>
-						            		个人资料<small>（输入提交可修改）</small>
-						            	</h1>
-					            	</div><!-- /.page-header -->
-                                    
+                                        <h1>
+                                            个人资料<small>（输入提交可修改）</small>
+                                        </h1>
+                                    </div><!-- /.page-header -->
+
                                     <div class="row">
-						            	<div class="col-xs-12">
-								            <!-- PAGE CONTENT BEGINS -->
-                                            
-                                            <form class="form-horizontal" role="form">
-								            	<div class="form-group">
-								            		<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 用户名 </label>
+                                        <div class="col-xs-12">
+                                            <!-- PAGE CONTENT BEGINS -->
 
-								          		    <div class="col-sm-9">
-											            <input type="text" id="form-field-1" placeholder="我我我我" class="col-xs-10 col-sm-5" />
-										            </div>
-								             	</div>
+                                            <form class="form-horizontal" role="form">
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 用户名 </label>
+
+                                                    <div class="col-sm-9">
+                                                        <input type="text" id="form-field-1" placeholder="我我我我" class="col-xs-10 col-sm-5" />
+                                                    </div>
+                                                </div>
                                             </form>
-                                            
-                                            <form class="form-horizontal" role="form">
-								            	<div class="form-group">
-								            		<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 密码 </label>
 
-								          		    <div class="col-sm-9">
-											            <input type="text" id="form-field-1" placeholder="&nbsp;" class="col-xs-10 col-sm-5" />
-										            </div>
-								             	</div>
+                                            <form class="form-horizontal" role="form">
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 密码 </label>
+
+                                                    <div class="col-sm-9">
+                                                        <input type="text" id="form-field-1" placeholder="&nbsp;" class="col-xs-10 col-sm-5" />
+                                                    </div>
+                                                </div>
                                             </form>
-                                            
-                                            <form class="form-horizontal" role="form">
-								            	<div class="form-group">
-								            		<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 电话 </label>
 
-								          		    <div class="col-sm-9">
-											            <input type="text" id="form-field-1" placeholder="18888886666" class="col-xs-10 col-sm-5" />
-										            </div>
-								             	</div>
+                                            <form class="form-horizontal" role="form">
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 电话 </label>
+
+                                                    <div class="col-sm-9">
+                                                        <input type="text" id="form-field-1" placeholder="18888886666" class="col-xs-10 col-sm-5" />
+                                                    </div>
+                                                </div>
                                             </form>
-                                            
-                                            <form class="form-horizontal" role="form">
-								            	<div class="form-group">
-								            		<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> QQ </label>
 
-								          		    <div class="col-sm-9">
-											            <input type="text" id="form-field-1" placeholder="888886666" class="col-xs-10 col-sm-5" />
-										            </div>
-								             	</div>
+                                            <form class="form-horizontal" role="form">
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> QQ </label>
+
+                                                    <div class="col-sm-9">
+                                                        <input type="text" id="form-field-1" placeholder="888886666" class="col-xs-10 col-sm-5" />
+                                                    </div>
+                                                </div>
                                             </form>
-                                            
-                                            <form class="form-horizontal" role="form">
-								            	<div class="form-group">
-								            		<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 邮箱 </label>
 
-								          		    <div class="col-sm-9">
-											            <input type="text" id="form-field-1" placeholder="23336666@163.com" class="col-xs-10 col-sm-5" />
-										            </div>
-								             	</div>
+                                            <form class="form-horizontal" role="form">
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 邮箱 </label>
+
+                                                    <div class="col-sm-9">
+                                                        <input type="text" id="form-field-1" placeholder="23336666@163.com" class="col-xs-10 col-sm-5" />
+                                                    </div>
+                                                </div>
                                             </form>
                                             <hr>
                                             <p class="form-actions center">
-										    	<button class="btn btn-sm btn-success btn-block">
+                                                <button class="btn btn-sm btn-success btn-block">
                                                     确认提交
                                                     <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
                                                 </button>
-										    </p>
+                                            </p>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                                 <div class="col-sm-5">
-                                
+
                                     <div class="widget-box">
-											<div class="widget-header widget-header-flat">
-												<h4 class="widget-title">账单</h4>
-											</div>
+                                        <div class="widget-header widget-header-flat">
+                                            <h4 class="widget-title">账单</h4>
+                                        </div>
 
-											<div class="widget-body">
-												<div class="widget-main">
-													
-													<hr />
-													<div class="row">
-														<div class="col-xs-12">
-															<ul class="list-unstyled spaced">
-																<li>
-																	<i class="ace-icon fa fa-bell-o bigger-110 purple"></i>
-																	近期账单流水
-																</li>
+                                        <div class="widget-body">
+                                            <div class="widget-main">
 
-																<li>
-																	<i class="ace-icon fa fa-check bigger-110 green"></i>
-																	2017/10/11&nbsp;-&nbsp;充值1000流量到账
-																</li>
+                                                <hr />
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <ul class="list-unstyled spaced">
+                                                            <li>
+                                                                <i class="ace-icon fa fa-bell-o bigger-110 purple"></i>
+                                                                近期账单流水
+                                                            </li>
 
-																<li>
-																	<i class="ace-icon fa fa-share blue bigger-110"></i>
-																	2017/10/05&nbsp;-&nbsp;购买消耗100流量		
-																</li>
+                                                            <li>
+                                                                <i class="ace-icon fa fa-check bigger-110 green"></i>
+                                                                2017/10/11&nbsp;-&nbsp;充值1000流量到账
+                                                            </li>
 
-																<li>
-																	<i class="ace-icon fa fa-share blue bigger-110"></i>
-																	2017/10/02&nbsp;-&nbsp;挖单消耗100流量		
-																</li>
+                                                            <li>
+                                                                <i class="ace-icon fa fa-share blue bigger-110"></i>
+                                                                2017/10/05&nbsp;-&nbsp;购买消耗100流量		
+                                                            </li>
 
-																<li>
-																	<i class="ace-icon fa fa-share blue bigger-110"></i>
-																	2017/10/01&nbsp;-&nbsp;购买消耗300流量		
-																</li>
+                                                            <li>
+                                                                <i class="ace-icon fa fa-share blue bigger-110"></i>
+                                                                2017/10/02&nbsp;-&nbsp;挖单消耗100流量		
+                                                            </li>
 
-																<li>
-																	<i class="ace-icon fa fa-share blue bigger-110"></i>
-																	2017/09/25&nbsp;-&nbsp;挖单消耗50流量		
-																</li>
+                                                            <li>
+                                                                <i class="ace-icon fa fa-share blue bigger-110"></i>
+                                                                2017/10/01&nbsp;-&nbsp;购买消耗300流量		
+                                                            </li>
 
-																<li>
-																	<i class="ace-icon fa fa-check bigger-110 green"></i>
-																	2017/09/01&nbsp;-&nbsp;充值500流量到账
-																</li>
-															</ul>
-                                                            
-                                                            <p class="form-actions center">
-										                     	<button class="btn btn-sm btn-success btn-block">
+                                                            <li>
+                                                                <i class="ace-icon fa fa-share blue bigger-110"></i>
+                                                                2017/09/25&nbsp;-&nbsp;挖单消耗50流量		
+                                                            </li>
+
+                                                            <li>
+                                                                <i class="ace-icon fa fa-check bigger-110 green"></i>
+                                                                2017/09/01&nbsp;-&nbsp;充值500流量到账
+                                                            </li>
+                                                        </ul>
+
+                                                        <p class="form-actions center">
+                                                            <button class="btn btn-sm btn-success btn-block">
                                                                 查看更多
-                                                               <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
-                                                               </button>
-										                    </p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div><!-- /.col -->
-                                
-                                
-                                
-                                </div>
+                                                                <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
+                                                            </button>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.col -->
+
+
+
                             </div>
-                        
                         </div>
-                        
-                        
-                        
-			    	</div>
+
+                    </div>
 
 
-				</div>
 
-			</div><!-- /.main-content -->
+                </div>
 
-			<!-- footer -->
-            <script src="../common/footer.js"></script>
 
-			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-			</a>
-		</div><!-- /.main-container -->
+            </div>
 
-		<!-- basic scripts -->
+        </div><!-- /.main-content -->
 
-		<!--[if !IE]> -->
-		<script src="../assets/js/jquery-2.1.4.min.js"></script>
+        <!-- footer -->
+        <script src="../common/footer.js"></script>
 
-		<!-- <![endif]-->
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+        </a>
+        <!-- /.main-container -->
 
-		<!--[if IE]>
-<script src="../assets/js/jquery-1.11.3.min.js"></script>
-<![endif]-->
-		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='../assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-		</script>
-		<script src="../assets/js/bootstrap.min.js"></script>
+        <!-- basic scripts -->
 
-		<!-- page specific plugin scripts -->
+        <!--[if !IE]> -->
+        <script src="../assets/js/jquery-2.1.4.min.js"></script>
 
-		<!-- ace scripts -->
-		<script src="../assets/js/ace-elements.min.js"></script>
-		<script src="../assets/js/ace.min.js"></script>
+        <!-- <![endif]-->
 
-		<!-- inline scripts related to this page -->
-	</body>
+        <!--[if IE]>
+    <script src="../assets/js/jquery-1.11.3.min.js"></script>
+    <![endif]-->
+        <script type="text/javascript">
+                if ('ontouchstart' in document.documentElement)
+                    document.write("<script src='../assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+        </script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+
+        <!-- page specific plugin scripts -->
+
+        <!-- ace scripts -->
+        <script src="../assets/js/ace-elements.min.js"></script>
+        <script src="../assets/js/ace.min.js"></script>
+
+        <!-- inline scripts related to this page -->
+    </body>
 </html>

@@ -37,23 +37,22 @@
             </div>
         </div>
         <div align="center">Collect from <a href="#" target="_blank" title="注册">注册</a></div>
-    </div>
-    <!-- Javascript -->
-    <script src="for-page/login/js/jquery-1.8.2.min.js"></script>
-    <script src="for-page/login/js/supersized.3.2.7.min.js"></script>
-    <script src="for-page/login/js/supersized-init.js"></script>
-    <script src="for-page/login/js/scripts.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            function getQueryStringByName(name) {
-                var result = location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
-                if (result == null || result.length < 1) {
-                    return "";
+        <!-- Javascript -->
+        <script src="for-page/login/js/jquery-1.8.2.min.js"></script>
+        <script src="for-page/login/js/supersized.3.2.7.min.js"></script>
+        <script src="for-page/login/js/supersized-init.js"></script>
+        <script src="for-page/login/js/scripts.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                function getQueryStringByName(name) {
+                    var result = location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
+                    if (result == null || result.length < 1) {
+                        return "";
+                    }
+                    return result[1];
                 }
-                return result[1];
-            }
-            $("#loginwin").attr("action", "php/action/login/action-login.php?backurl=" + getQueryStringByName("backurl") + "");
-        });
-    </script>
-</body>
+                $("#loginwin").attr("action", "php/action/login/action-login.php?backurl=" + getQueryStringByName("backurl") + "");
+            });
+        </script>
+    </body>
 </html>

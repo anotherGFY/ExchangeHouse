@@ -20,7 +20,8 @@ class McmModel extends ApicloudModel {
         return $this->get(self::SERVERAPIURL . 'mcm/api/' . $name . '?filter=' . $filter);
     }
 
-    function objGet($name, $id = '') { //获取对象ById
+    function objGet($name, $access_token, $id = '') { //获取对象ById
+        $this->headerAdd(array("authorization: $access_token"));
         return $this->get(self::SERVERAPIURL . 'mcm/api/' . $name . '/' . $id);
     }
 

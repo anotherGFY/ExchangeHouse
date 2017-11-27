@@ -5,12 +5,40 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/php/APSK/McmModel.php");
+
+$uri = isset($_GET["login"]) ? $_GET["login"] : "http://www.hades.com/login.php";
 
 $out = <<<EOF
-    window.onload=function(){
-         window.location.href="../login.php?backurl="+window.location.href; 
-   };
+     window.location.href="$uri?backurl="+window.location.href;
 EOF;
 
-echo $out;
+$isChecked = FALSE;
+
+if (isset($_COOKIE["usertoken"]) && isset($_COOKIE["user"])) {
+    $mcm = new McmModel();
+    $name = 'accessToken';
+    $id = $_COOKIE["usertoken"];
+    $token = $mcm->objGet($name, $id, $id);
+    if (isset($token) && !isset($token->error)) {
+        $isChecked = $token->userId == $_COOKIE["user"];
+        setcookie("usertoken", $_COOKIE["usertoken"], time() + 900, "/");
+        setcookie("user", $_COOKIE["user"], time() + 900, "/");
+    } else {
+        switch ($token->error->statusCode) {
+            case 401:
+                echo "alert('用户登录超时');";
+                break;
+            default :
+                echo "alert('操作超时,请重新登录');";
+                break;
+        }
+    }
+} else {
+    echo "alert('由于您长时间未有任何操作,请重新登录');";
+}
+
+if ($isChecked == FALSE) {//验证未通过
+    echo $out;
+}
 
