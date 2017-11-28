@@ -22,8 +22,8 @@ if ($username != NULL && $password != NULL) {
     } else {
         $userid = $mcm->userGet($userLogin->userId, $userLogin->id);
         $userid->verificationToken = $userLogin->id;
-        setcookie("usertoken", $userid->verificationToken, time() + 900, "/");
-        setcookie("user", $userLogin->userId, time() + 900, "/");
+        setcookie("usertoken", $userid->verificationToken, time() + 2900, "/");
+        setcookie("user", $userLogin->userId, time() + 2900, "/");
 
         Header("HTTP/1.1 200 LoginOK");
         Header("Location: " . $backurl);

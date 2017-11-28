@@ -10,6 +10,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/php/APSK/McmModel.php");
 $uri = isset($_GET["login"]) ? $_GET["login"] : "http://www.hades.com/login.html";
 
 $out = <<<EOF
+     USERINFO ={};
      window.location.href="$uri?backurl="+window.location.href;
 EOF;
 
@@ -22,8 +23,8 @@ if (isset($_COOKIE["usertoken"]) && isset($_COOKIE["user"])) {
     $token = $mcm->objGet($name, $id, $id);
     if (isset($token) && !isset($token->error)) {
         $isChecked = $token->userId == $_COOKIE["user"];
-        setcookie("usertoken", $_COOKIE["usertoken"], time() + 900, "/");
-        setcookie("user", $_COOKIE["user"], time() + 900, "/");
+        setcookie("usertoken", $_COOKIE["usertoken"], time() + 2900, "/");
+        setcookie("user", $_COOKIE["user"], time() + 2900, "/");
     } else {
         setcookie("usertoken", NULL, time() - 1000, "/");
         setcookie("user", NULL, time() - 1000, "/");
@@ -42,5 +43,22 @@ if (isset($_COOKIE["usertoken"]) && isset($_COOKIE["user"])) {
 
 if ($isChecked == FALSE) {//验证未通过
     echo $out;
+} else {
+    $token = $_COOKIE["usertoken"];
+    $user = $_COOKIE["user"];
+    $mcm = new McmModel();
+    $now = time();
+    $appkey = sha1($mcm->appid . "UZ" . $mcm->appkey . "UZ" . $now) . "." . $now;
+
+
+    $userinfo = <<<EOF
+     USERINFO = {
+        APP: "$mcm->appid" ,
+        KEY: "$appkey" ,
+        TOKEN: "$token" ,
+        ID: "$user"
+    };
+EOF;
+    echo $userinfo;
 }
 
