@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta charset="utf-8" />
+        <title>x新增用户</title>
+
+
+        <meta name="description" content="" />
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <!-- 页面登录验证 -->
+        <script src="../for-page/login/js/php/initauth.php"></script> 
+
+        <link rel="shortcut icon" href="../assets/images/logo/logo-s.ico">
+
+
+        <!-- bootstrap & fontawesome -->
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+        <!-- adduser page styles -->
+        <link rel="stylesheet" type="text/css" href="../assets/css/adduser.css">
+
+        <!-- text fonts -->
+        <link rel="stylesheet" href="../assets/css/fonts.googleapis.com.css" />
+
+        <!-- ace styles -->
+        <link rel="stylesheet" href="../assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+        <!--[if lte IE 9]>
+                <link rel="stylesheet" href="../assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+        <![endif]-->
+        <link rel="stylesheet" href="../assets/css/ace-rtl.min.css" />
+
+        <!--[if lte IE 9]>
+          <link rel="stylesheet" href="../assets/css/ace-ie.min.css" />
+        <![endif]-->
+
+        <!-- inline styles related to this page -->
+
+        <!-- ace settings handler -->
+        <script src="../assets/js/ace-extra.min.js"></script>
+
+        <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+        <!--[if lte IE 8]>
+        <script src="../assets/js/html5shiv.min.js"></script>
+        <script src="../assets/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body class="no-skin">
+
+        <div class="main-container ace-save-state" id="main-container">
+            <script type="text/javascript">
+                try {
+                    ace.settings.loadState('main-container');
+                } catch (e) {
+                }
+            </script>
+            <!--  侧边导航栏 start  -->
+            <script src="../common/sidebar-in.js"></script>
+            <!--  侧边导航栏 end  -->
+
+            <div class="main-content">
+
+                <div class="main-content-inner">
+
+                    <!--  顶部 start -->
+                    <script src="../common/head-in.js"></script>
+                    <!--  顶部 end  -->
+
+
+                    <div class="main-content-inner for-nav-top">
+
+
+
+                    <div class="page-content">
+
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <!-- PAGE CONTENT BEGINS -->
+                                <div class="hr dotted"></div>
+
+
+
+                                <div>
+                                    <div id="user-profile-3" class="user-profile row">
+                                        <div class="col-sm-offset-1 col-sm-10">
+                                            <div class="well well-sm row"> 
+
+                                                
+                                                <div class="col-sm-6 col-xs-6">
+                                                    <button class="btn btn-xs btn-info btn-round adduser-btn">
+                                                        <i class="ace-icon fa fa-meh-o bigger-110"></i>
+
+                                                        新增用户
+                                                    </button>
+                                                </div>
+
+                                                
+                                                <div class="col-sm-6 col-xs-6">
+                                                    <button class="btn btn-xs btn-info btn-round user-list-btn">
+                                                        <i class="ace-icon fa fa-list-ol bigger-110"></i>
+
+                                                        用户列表
+                                                    </button>
+                                                </div>
+
+
+                                            </div><!-- /.well -->
+
+                                            <div class="space"></div>
+
+                                            <form class="form-horizontal">
+                                                <div class="tabbable">
+
+                                                    <ul class="nav nav-tabs padding-16">
+                                                        <li class="active">
+                                                            <a data-toggle="tab" href="#edit-basic">
+                                                                <i class="green ace-icon fa fa-pencil-square-o bigger-125"></i>
+                                                                基本信息
+                                                            </a>
+                                                        </li>
+
+
+                                                        <li>
+                                                            <a data-toggle="tab" href="#edit-password">
+                                                                <i class="blue ace-icon fa fa-key bigger-125"></i>
+                                                                设立密码
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+
+                                                    <div class="tab-content profile-edit-tab-content">
+
+
+
+                                                        <div id="edit-basic" class="tab-pane in active">
+                                                            <h4 class="header blue bolder smaller">基本信息</h4>
+
+                                                            <div class="row">
+
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-username">上传头像</label>
+
+                                                                    <div class="col-sm-9">
+                                                                        <input type="file" class="img-input col-xs-12 col-sm-4" />
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-username">用户名</label>
+
+                                                                    <div class="col-sm-9">
+                                                                        <input class="col-xs-12 col-sm-4" type="text" id="form-field-username" placeholder="Username" value="用户登录名" />
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <hr />
+
+                                                            <div class="space-4"></div>
+
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label no-padding-right">账户类型</label>
+
+                                                                <div class="col-sm-9 zhanghu">
+                                                                    <label class="inline">
+                                                                        <input name="form-field-radio" type="radio" class="ace" />
+                                                                        <span class="lbl middle"> 主账户</span>
+                                                                    </label>
+
+                                                                    &nbsp; &nbsp; &nbsp;
+                                                                    <label class="inline">
+                                                                        <input name="form-field-radio" type="radio" class="ace" />
+                                                                        <span class="lbl middle"> 子账户</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="space"></div>
+                                                            <h4 class="header blue bolder smaller">联系方式</h4>
+
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label no-padding-right" for="form-field-email">邮件</label>
+
+                                                                <div class="col-sm-9">
+                                                                    <span class="input-icon input-icon-right">
+                                                                        <input type="email" id="form-field-email" value="1111@163.com" />
+                                                                        <i class="ace-icon fa fa-envelope"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="space-4"></div>
+
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label no-padding-right" for="form-field-phone">电话</label>
+
+                                                                <div class="col-sm-9">
+                                                                    <span class="input-icon input-icon-right">
+                                                                        <input class="input-medium input-mask-phone" type="text" id="form-field-phone" />
+                                                                        <i class="ace-icon fa fa-phone fa-flip-horizontal"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="space"></div>
+                                                            <h4 class="header blue bolder smaller">社交</h4>
+
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label no-padding-right" for="form-field-qq">QQ</label>
+
+                                                                <div class="col-sm-9">
+                                                                    <span class="input-icon">
+                                                                        <input type="text" value="QQ" id="form-field-QQ" />
+                                                                        <i class="ace-icon fa fa-qq blue"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="space-4"></div>
+
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label no-padding-right" for="form-field-weixin">Weixin</label>
+
+                                                                <div class="col-sm-9">
+                                                                    <span class="input-icon">
+                                                                        <input type="text" value="微信" id="form-field-weixin" />
+                                                                        <i class="ace-icon fa fa-weixin light-blue"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="space-4"></div>
+                                                        </div>
+
+
+                                                        <div id="edit-password" class="tab-pane">
+                                                            <div class="space-10"></div>
+
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label no-padding-right" for="form-field-pass1">新密码</label>
+
+                                                                <div class="col-sm-9">
+                                                                    <input type="password" id="form-field-pass1" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="space-4"></div>
+
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label no-padding-right" for="form-field-pass2">确认密码</label>
+
+                                                                <div class="col-sm-9">
+                                                                    <input type="password" id="form-field-pass2" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="clearfix form-actions">
+                                                    <div class="col-md-offset-3 col-md-9">
+                                                        <button class="btn btn-info" type="button">
+                                                            <i class="ace-icon fa fa-check bigger-110"></i>
+                                                            保存
+                                                        </button>
+
+                                                        &nbsp; &nbsp;
+                                                        <button class="btn" type="reset">
+                                                            <i class="ace-icon fa fa-undo bigger-110"></i>
+                                                            重置
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div><!-- /.span -->
+                                    </div><!-- /.user-profile -->
+                                </div>
+
+                                <!-- PAGE CONTENT ENDS -->
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                    </div><!-- /.page-content -->
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+
+        <!-- footer -->
+        <script src="../common/footer.js"></script>
+
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+        </a>
+        </div><!-- /.main-content -->
+
+        <!-- basic scripts -->
+
+        <!--[if !IE]> -->
+        <script src="../assets/js/jquery-2.1.4.min.js"></script>
+        <!-- <![endif]-->
+
+        <!--[if IE]>
+    <script src="../assets/js/jquery-1.11.3.min.js"></script>
+    <![endif]-->
+        <script type="text/javascript">
+                if ('ontouchstart' in document.documentElement)
+                    document.write("<script src='../assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+        </script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+
+        <!-- page specific plugin scripts -->
+
+        <!-- ace scripts -->
+        <script src="../assets/js/ace-elements.min.js"></script>
+        <script src="../assets/js/ace.min.js"></script>
+
+        <!-- inline scripts related to this page -->
+    </body>
+</html>

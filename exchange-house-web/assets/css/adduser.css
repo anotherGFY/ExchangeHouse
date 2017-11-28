@@ -1,0 +1,19 @@
+.img-input{
+    position: relative;
+    height: auto;
+    border: 1px dashed #AAA;
+    border-radius: 4px;
+    padding: 5px 4px 6px;
+    color: #85b8f9;
+}
+.zhanghu{
+    margin: 6px 0;
+}
+.adduser-btn{
+	float: right;
+	padding: 1px 20%;
+}
+.user-list-btn{
+	float: left;
+	padding: 1px 20%;
+}
