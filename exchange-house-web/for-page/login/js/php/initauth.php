@@ -50,14 +50,23 @@ if ($isChecked == FALSE) {//验证未通过
     $now = time();
     $appkey = sha1($mcm->appid . "UZ" . $mcm->appkey . "UZ" . $now) . "." . $now;
 
-
+    
+    
+//     USERINFO = {
+//        APP: "$mcm->appid" ,
+//        KEY: "$appkey" ,
+//        TOKEN: "$token" ,
+//        ID: "$user"
+//     };
     $userinfo = <<<EOF
-     USERINFO = {
-        APP: "$mcm->appid" ,
-        KEY: "$appkey" ,
-        TOKEN: "$token" ,
-        ID: "$user"
-    };
+
+eval(function(p,a,c,k,e,r){e=String;if('0'.replace(0,e)==0){while(c--)r[e(c)]=k[c];k=[function(e){return r[e]||e}];e=function(){return'^$'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('USERINFO={APP:"$mcm->appid",KEY:"$appkey",TOKEN:"$token",ID:"$user"};',[],1,''.split('|'),0,{}))
+
+if(typeof(pMethod)=="undefined")var pMethod=function(uri,data="{}",type="GET",success,fail){
+$.ajax({"url":uri,"cache":true,"headers":{"X-APICloud-AppId":USERINFO.APP,"X-APICloud-AppKey":USERINFO.KEY,"authorization":USERINFO.TOKEN},"data":data,"type":(type=="POST")?"POST":"GET"}).success(function(data,status,header){if($.isFunction(success))success(data,status,header)}).fail(function(header,status,errorThrown){if($.isFunction(fail))fail(header,status,errorThrown)})};
+
+            
+            
 EOF;
     echo $userinfo;
 }
