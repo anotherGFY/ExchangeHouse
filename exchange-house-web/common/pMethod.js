@@ -1,7 +1,8 @@
 
 if (typeof (pMethod) == "undefined")
-    var pMethod = function (uri, data = "{}", type = "GET", success, fail)
+    var pMethod = function (uri, data, type, success, fail)
     {
+        var data = $.trim(data) == "" ? "{}" : data;
         $.ajax({
             "url": uri,
             "cache": true,
