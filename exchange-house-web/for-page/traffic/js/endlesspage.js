@@ -67,7 +67,7 @@ $(function () {
             html += '<span class="label label-sm label-success">' + json[i].crm_phonenumber.substring(0, 3) + '****' + json[i].crm_phonenumber.substring(7, 11) + '</span>';
             html += '</td>';
             html += '<td class="center">' + json[i].rating + '</td>';
-            html += '<td class="hidden-480 center">' + json[i].update_time + '</td>';
+            html += '<td class="hidden-480 center">' + new Date(json[i].update_time*1000).toLocaleDateString() + '</td>';
             html += '<td class="hidden-480 center">' + json[i].origin + '</td>';
 
             html += '<td class="center">';
