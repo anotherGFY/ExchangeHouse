@@ -51,7 +51,7 @@ $(function () {
             html += '<tr>';
             html += '<td class="center">';
             html += '<label class="pos-rel">';
-            html += '<input type="checkbox" class="ace" />';
+            html += '<input type="checkbox" class="ace"  value=' + json[i].customer_id + ' />';
             html += '<span class="lbl">';
             html += '</span>';
             html += '</label>';
@@ -61,12 +61,12 @@ $(function () {
             html += '<a href="#">' + json[i].name + '</a>';
             html += '</td>';
             html += '<td class="hidden-480 center">' + '26' + '</td>';
-            html += '<td class="center">' + '666' + '</td>';
+            html += '<td class="hidden-480 center">' + '666' + '</td>';
 
             html += '<td class="center">';
             html += '<span class="label label-sm label-success">' + json[i].crm_phonenumber.substring(0, 3) + '****' + json[i].crm_phonenumber.substring(7, 11) + '</span>';
             html += '</td>';
-            html += '<td class="hidden-480 center">' + json[i].rating + '</td>';
+            html += '<td class="center">' + json[i].rating + '</td>';
             html += '<td class="hidden-480 center">' + json[i].update_time + '</td>';
             html += '<td class="hidden-480 center">' + json[i].origin + '</td>';
 
@@ -104,12 +104,18 @@ $(function () {
         var documentH = $(document).height();  //滚动条高度 
         var windowH = $(window).height(); //窗口高度       
         if (scrollTop >= documentH - windowH) {
+           
+            if(pagenumber>=200){
+                $(window).unbind('scroll');
+            }else{
             pagenumber += pagesize;
             getData((pagenumber - 1), pagesize);
             //$(window).unbind('scroll');
             $("#btn_Page").show();
+            }
 
         }
+        
     };
     //定义鼠标滚动事件
     $(window).scroll(scrollHandler);
